@@ -1,9 +1,10 @@
 FROM igorgajsin/docker-base
 
 COPY debconf-selections /
-COPY ssl/fullchain.pem /etc/ssl/call.gajsin.name.crt
-COPY ssl/privkey.pem /etc/ssl/call.gajsin.name.key
+COPY ssl/fakechain.pem /etc/ssl/call.gajsin.name.crt
+COPY ssl/fakekey.pem /etc/ssl/call.gajsin.name.key
 COPY nginx/call.gajsin.name /etc/nginx/sites-enabled/call.gajsin.name
+COPY config.js /etc/jitsi/meet/config.js
 
 RUN echo 'deb https://download.jitsi.org stable/' \
     >> /etc/apt/sources.list.d/jitsi-stable.list \
