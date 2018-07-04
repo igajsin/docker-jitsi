@@ -6,3 +6,5 @@ cd /etc/init.d
     && ./jitsi-videobridge start \
     && ./jicofo start \
     && ./nginx start
+
+/bin/tailf /var/log/jitsi/jvb.log
