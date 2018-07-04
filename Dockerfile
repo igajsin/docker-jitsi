@@ -18,6 +18,7 @@ RUN echo 'deb https://download.jitsi.org stable/' \
     && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
     jitsi-meet
 
-EXPOSE 7080
+EXPOSE 80
+EXPOSE 443
 
 CMD ["/run.sh"]
